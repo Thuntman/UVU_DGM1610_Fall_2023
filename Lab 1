@@ -1,0 +1,9 @@
+using System;
+Public Class 
+{
+static void Main(string[] args)
+{
+    string name="Hi" ;
+    Console.WriteLine(name);
+}
+}
