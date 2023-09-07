@@ -1,0 +1,10 @@
+using System;
+namespace MyApplication
+{
+class program
+{static void Main(string[] args)
+{string name = "Hi";
+Console.WriteLine(name);
+}
+}
+}
