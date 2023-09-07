@@ -5,6 +5,9 @@ class program
 {static void Main(string[] args)
 {string name = "Hi";
 Console.WriteLine(name);
+int x = 25;
+x += 5;
+Console.WriteLine(x);
 }
 }
 }
