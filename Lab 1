@@ -1,9 +1,10 @@
 using System;
-Public Class 
+namespace MyApplication
 {
-static void Main(string[] args)
-{
-    string name="Hi" ;
-    Console.WriteLine(name);
+class program
+{static void Main(string[] args)
+{string name = "Hi";
+Console.WriteLine(name);
+}
 }
 }
