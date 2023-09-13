@@ -1,0 +1,28 @@
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+    string name = "Enter the temperature in Celcius  to see what the weather calls for Today";
+    Console.WriteLine(name);
+    {
+    int temperature = 31;
+      if ( temperature > 30 ) 
+      {
+        Console.WriteLine("Stay hydrated and avoid being in the Sun for too long!");
+        }
+        else if ( temperature < 30)
+        {
+        Console.WriteLine("Enjoy the nice weather!");
+        }
+        else
+        {
+        Console.WriteLine("Enjoy the Nice weather!");
+        }
+        }
+        }
+        }
+        }
