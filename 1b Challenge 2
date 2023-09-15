@@ -1,0 +1,54 @@
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+    Console.WriteLine("Enter your score to see your grade.");
+    int score = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Your Score:" + score);
+    if (score >= 90)
+    {
+    Console.WriteLine("A: Good Job!");
+    }
+    else if (score >= 80)
+    {
+    Console.WriteLine("B: Nice!");
+    }
+    else if (score >= 70)
+    {
+    Console.WriteLine("C: Could use some improvement.");
+    }
+    else if (score >= 60)
+    {
+    Console.WriteLine("D: Could use a lot of improvement.");
+    }
+    else
+    {
+    Console.WriteLine("F: Unacceptable!");
+    }
+    {
+    Console.WriteLine("What is your favorite subject: Math(1), Science(2), English(3), or Art(4)? Type the number associated with the subject.");
+    int subject = 2;
+    Console.WriteLine("Your favorite subject: " + subject);
+    switch (subject)
+    {
+    case 1:
+    Console.WriteLine("Better keep practicing those mathmatical equations!");
+    break;
+    case 2:
+    Console.WriteLine("Always fun trying new experiments!");
+    break;
+    case 3:
+    Console.WriteLine("Better work on your grammar skills!");
+    break;
+    case 4:
+    Console.WriteLine("Don't forget to use references!");
+    break;
+    }
+        }
+        }
+        }
+        }
