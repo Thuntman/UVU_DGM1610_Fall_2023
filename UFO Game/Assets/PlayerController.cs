@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 public float horizontalInput;
  public float speed;
  public float xRange;
+ public Transform Blaster;
+ public GameObject Laser;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,14 @@ if(transform.position.x > xRange )
 {
 transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
 }
+if(Input.GetKeyDown(KeyCode.Space))
+{
+Instantiate(Laser, Blaster.transform.position, Laser.transform.rotation);
+}
         
     }
+private void OnTriggerEnter(Collider other)
+{
+Destroy(other.gameObject);
+}
 }
