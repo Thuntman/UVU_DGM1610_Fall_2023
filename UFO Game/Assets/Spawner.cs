@@ -7,8 +7,7 @@ public class Spawner : MonoBehaviour
 public GameObject [] item;
 [SerializeField]
 private float spawnRangeX = 17.0f;
-[SerializeField]
-private float spawnPosZ;
+private float spawnPosZ = 25.0f;
 private float startDelay = 1f;
 private float spawnInterval = 5f;
     // Start is called before the first frame update
