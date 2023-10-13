@@ -34,7 +34,7 @@ Instantiate(Laser, Blaster.transform.position, Laser.transform.rotation);
 }
         
     }
-private void OnTriggerEnter(Collider other)
+void OnTriggerEnter(Collider other)
 {
 Destroy(other.gameObject);
 }

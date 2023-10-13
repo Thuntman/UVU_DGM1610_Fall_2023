@@ -20,7 +20,7 @@ InvokeRepeating("SpawnRandomItem", startDelay, spawnInterval);
     // Update is called once per frame
     void SpawnRandomItem()
     {
-     Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX),0, spawnPosZ);
+     Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX),2, spawnPosZ);
 int itemIndex = Random.Range(0, item.Length);
 Instantiate(item[itemIndex], spawnPos, item[itemIndex].transform.rotation);   
     }

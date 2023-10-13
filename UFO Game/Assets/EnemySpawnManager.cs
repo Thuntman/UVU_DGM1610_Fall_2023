@@ -18,7 +18,7 @@ void Start()
     // Update is called once per frame
     void SpawnRandomEnemy()
     {
-       Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX),0, spawnPosZ);
+       Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX),2, spawnPosZ);
 int ufoIndex = Random.Range(0,ufoPrefabs.Length);
      Instantiate(ufoPrefabs[ufoIndex],spawnPos, ufoPrefabs[ufoIndex].transform.rotation);
 }   
