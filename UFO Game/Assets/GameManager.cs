@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 public bool isGameOver;
-private GameObject gameOverText;
+public GameObject gameOverText;
     // Start is called before the first frame update
     void Awake()
     {
