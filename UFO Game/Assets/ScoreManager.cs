@@ -5,23 +5,31 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-public int score;
-public TextMeshProUGUI scoreText;
-    
-   public void IncreaseScore(int amount)
+public int score; // Store score value
+    public TextMeshProUGUI scoreText; // Reference visual text UI element to change
+
+
+    // Start is called before the first frame update
+    void Start()
     {
-        score += amount;
-UpdateScoreText();
+        
     }
 
-    
-   public void DecreaseScore(int amount)
+    //This function rewards the player
+    public void IncreaseScore(int amount)
     {
-      score -= amount;
-UpdateScoreText();  
+        score += amount; //Add amount to the score
+        UpdateScoreText(); // Update the score UI text
     }
-public void UpdateScoreText()
-{
-scoreText.text = "Score: " + score;
-}
+    //This function penalizes the player
+     public void DecreaseScore(int amount)
+    {
+        score -= amount; //Subtract amount from the score
+        UpdateScoreText(); //Update the score UI text
+    }
+
+    public void UpdateScoreText()
+    {
+        scoreText.text = "Score: "+ score;
+    }
 }

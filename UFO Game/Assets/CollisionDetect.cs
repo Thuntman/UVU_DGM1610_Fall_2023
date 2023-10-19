@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class CollisionDetect : MonoBehaviour
 {
-private ScoreManager scoreManager;
-public int scoreToGive;
-void Start()
-{
-scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
-}
-    
-    void OnTriggerEnter(Collider other)
-{
+ private ScoreManager scoreManager; // A variable to hold the reference to the scoremanager
+    public int scoreToGive;
 
-Destroy(gameObject);
-Destroy(other.gameObject);
-scoreManager.IncreaseScore(scoreToGive);
-}
+    // Start is called before the first frame update
+    void Start()
+    {
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); // Reference scoremanager
+        
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        scoreManager.IncreaseScore(scoreToGive); // Increase Score 
+        Destroy(other.gameObject); //Destroy the other game object it hits
+        Destroy(gameObject); // Destroy this game object 
+        
+    }
 }

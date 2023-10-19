@@ -9,10 +9,11 @@ public float horizontalInput;
  public float xRange;
  public Transform Blaster;
  public GameObject Laser;
+public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -28,14 +29,9 @@ if(transform.position.x > xRange )
 {
 transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
 }
-if(Input.GetKeyDown(KeyCode.Space))
+if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
 {
 Instantiate(Laser, Blaster.transform.position, Laser.transform.rotation);
-}
-        
+}       
     }
-void OnTriggerEnter(Collider other)
-{
-Destroy(other.gameObject);
-}
 }
