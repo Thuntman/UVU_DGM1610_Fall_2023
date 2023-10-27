@@ -10,9 +10,13 @@ public float horizontalInput;
  public Transform Blaster;
  public GameObject Laser;
 public GameManager gameManager;
+
+  private AudioSource blasterAudio;
+    public AudioClip laserBlast;
     // Start is called before the first frame update
     void Start()
     {
+	blasterAudio = GetComponent<AudioSource>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
@@ -32,6 +36,7 @@ transform.position = new Vector3(xRange, transform.position.y, transform.positio
 if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
 {
 Instantiate(Laser, Blaster.transform.position, Laser.transform.rotation);
+blasterAudio.PlayOneShot(laserBlast, 1f);
 }       
     }
 }
