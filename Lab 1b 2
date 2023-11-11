@@ -1,0 +1,38 @@
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+    Console.WriteLine("Enter your score to see your grade.");
+    {
+    int score = 60;
+     {
+    Console.WriteLine("Your Score:" + score);
+        }
+    if (score >= 90)
+    {
+    Console.WriteLine("A: Good Job!");
+    }
+    else if (score >= 80)
+    {
+    Console.WriteLine("B: Nice!");
+    }
+    else if (score >= 70)
+    {
+    Console.WriteLine("C: Could use some improvement.");
+    }
+    else if (score >= 60)
+    {
+    Console.WriteLine("D: Could use a lot of improvement.");
+    }
+    else
+    {
+    Console.WriteLine("F: Unacceptable!");
+    }
+        }
+        }
+        }
+        }

@@ -1,0 +1,38 @@
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+    Console.WriteLine("Enter the temperature in Celcius to see what the weather calls for Today.");
+   int temperature = Convert.ToInt32( Console.ReadLine() );
+    Console.WriteLine("The temperature is: " + temperature);
+      if ( temperature >= 30 ) 
+      {
+        Console.WriteLine("Stay hydrated and avoid being in the Sun for too long!");
+        }
+        else if ( temperature >= 20)
+        {
+        Console.WriteLine("Enjoy the nice weather!");
+        }
+        else if ( temperature >= 10 )
+        {
+        Console.WriteLine("Wear a light jacket!");
+        }
+        else if ( temperature >= 0 )
+        {
+        Console.WriteLine("Wear warm clothing!");
+        }
+        else if ( temperature < 0 )
+        {
+        Console.WriteLine("Stay inside!");
+        }
+        else
+        {
+        Console.WriteLine("Stay inside!");
+        }
+        }
+        }
+        }

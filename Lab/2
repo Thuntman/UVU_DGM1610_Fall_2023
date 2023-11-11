@@ -1,0 +1,12 @@
+using System;
+namespace MyApplication
+{
+class program
+{
+static void Main(string[] args)
+{
+int myNum = 35;
+Console.WriteLine(myNum);
+}
+}
+}
