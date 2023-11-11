@@ -1,26 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "New Int Data", menuName = "Int Data")]
+[CreateAssetMenu]
 
 public class IntData : ScriptableObject
 {
-	[SerializeField]
-private int value;
-   public int Value
+	public int value;
+	public UnityEvent disableEvent;
+   	
+
+	public void SetValue(int num)
 	{
-		get 
-		{
-			return value;
-		}
-		set 
-		{
-			this.value = value;
-		}
+		value = num;
 	}
-public void UpdateValue(int num)
+
+	public void SetValue (IntData obj)
+	{
+		value = obj.value;
+	}
+
+	public void UpdateValue(int num)
 	{
 		value += num;
+	}
+	
+	public void OnDisable()
+	{
+		disableEvent.Invoke();
 	}
 }

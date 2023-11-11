@@ -5,7 +5,7 @@ public class ObjectBehavior : MonoBehaviour
 {
     private SpriteRenderer rendererObj;
 	
-	private void Start()
+	private void Awake()
 	{
 		rendererObj = GetComponent<SpriteRenderer>();
 	}
