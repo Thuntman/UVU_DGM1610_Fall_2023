@@ -6,7 +6,6 @@ using UnityEngine.Events;
 public class IntData : ScriptableObject
 {
 	public int value;
-	public UnityEvent disableEvent;
    	
 
 	public void SetValue(int num)
@@ -22,10 +21,5 @@ public class IntData : ScriptableObject
 	public void UpdateValue(int num)
 	{
 		value += num;
-	}
-	
-	public void OnDisable()
-	{
-		disableEvent.Invoke();
 	}
 }
